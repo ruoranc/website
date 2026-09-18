@@ -2,103 +2,298 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Ruoran Cheng's Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Ruoran Cheng — PhD in Economic History from the London School of Economics and Political Science.">
+    <title>Ruoran Cheng</title>
+
     <style>
-        body {
-          margin:40px auto;
-          max-width:800px;
-          font-size:16px;
-          color:#444;
-          padding:0 10px;
-          font-family: 'Times New Roman', 'Noto Serif SC', 'Songti SC', SimSun, serif;
+      :root {
+        --text: #262626;
+        --muted: #666;
+        --link: #205b8f;
+        --rule: #dedede;
+        --page-width: 840px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background: #fff;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      main {
+        width: min(var(--page-width), calc(100% - 36px));
+        margin: 52px auto 72px;
+      }
+
+      a {
+        color: var(--link);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+      }
+
+      a:hover {
+        text-decoration-thickness: 2px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #111;
+        line-height: 1.25;
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: clamp(2rem, 6vw, 2.65rem);
+        letter-spacing: -0.025em;
+      }
+
+      h2 {
+        margin: 0 0 18px;
+        font-size: 1.38rem;
+      }
+
+      h3 {
+        margin: 0 0 8px;
+        font-size: 1.02rem;
+      }
+
+      p {
+        margin: 0 0 1rem;
+      }
+
+      .masthead {
+        display: grid;
+        grid-template-columns: 1fr 150px;
+        gap: 32px;
+        align-items: center;
+        margin-bottom: 26px;
+      }
+
+      .position {
+        margin: 0 0 10px;
+        font-size: 1.03rem;
+        font-weight: 600;
+      }
+
+      .current-role,
+      .links {
+        color: var(--muted);
+      }
+
+      .current-role {
+        margin: 0 0 12px;
+      }
+
+      .links {
+        margin: 0;
+      }
+
+      .avatar {
+        display: block;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      nav {
+        margin: 26px 0 0;
+        padding: 12px 0;
+        border-top: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule);
+        font-size: 0.95rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin-right: 22px;
+        color: #333;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        color: var(--link);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      section {
+        padding: 34px 0;
+        border-bottom: 1px solid var(--rule);
+        scroll-margin-top: 18px;
+      }
+
+      section > :last-child {
+        margin-bottom: 0;
+      }
+
+      .publication,
+      .working-paper {
+        margin-bottom: 22px;
+      }
+
+      .paper-title {
+        font-size: 1.06rem;
+        font-weight: 400;
+      }
+
+      .publication-link {
+        margin-top: 3px;
+        font-size: 0.94rem;
+      }
+
+      .publication-note,
+      .teaching-note {
+        margin-top: 3px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      ul {
+        padding-left: 1.35rem;
+      }
+
+      li + li {
+        margin-top: 10px;
+      }
+
+      footer {
+        padding-top: 24px;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      @media (max-width: 620px) {
+        main {
+          margin-top: 30px;
         }
-        p {
-          text-align: justify;
+
+        .masthead {
+          grid-template-columns: 1fr;
+          gap: 20px;
         }
-        h1,h2,h3 {
-          line-height: 1.2;
-        }
-        .paper-title {
-          font-size: 1.15em;
-        }
+
         .avatar {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          max-width: 30%;
-          height: auto;
-          border-radius: 50%;
+          grid-row: 1;
+          width: 112px;
+          height: 112px;
         }
+
+        nav a {
+          margin-right: 16px;
+          margin-bottom: 4px;
+        }
+
+        section {
+          padding: 28px 0;
+        }
+      }
     </style>
   </head>
 
-    <body>
-      <img src="./avatar.jpg" class="avatar" alt="avatar" />
-      <h2>Ruoran Cheng</h2>
-      <p>
-        Email: <a
-          href="mailto:R.Cheng4@lse.ac.uk">R.Cheng4@lse.ac.uk</a>
-      </p>
-      <p>I have a PhD in Economic History from the London School of Economics and Political Science. I now work full-time at a coffee company. In my spare time, I continue to pursue academic research as a personal interest, although coffee—and especially brewing it well—matters much more to me. I firmly believe that coffee makes life better.</p>
-      
-      <hr />
-      <h2>Publications:</h2>
-      <ul>
-        <li>
-          <p>
-            <strong>Cheng, R.<sup>*</sup></strong>, Yu, X., Li, D. <em>et al.</em> <span class="paper-title">Topographic accessibility and proto-urban settlement organization in Neolithic China.</span> <em>Nat Cities</em> (2026).<br />
-            <a href="https://doi.org/10.1038/s44284-026-00511-2">https://doi.org/10.1038/s44284-026-00511-2</a><br />
-            <sup>*</sup> Corresponding author.
-          </p>
-          <p>
-            Cities emerged from settlement systems that predated formal roads, mature states and institutionalized urban governance, but the large-scale spatial organization of these proto-urban systems is still poorly understood. Here we examine how terrain-derived accessibility related to settlement organization across Neolithic China between 5000 and 2000 BCE, combining a newly compiled georeferenced archeological dataset with a measure of overland accessibility derived from topography. Settlement intensity became increasingly concentrated along accessible corridors between 5000 and 2500 BCE. Between 2500 and 2000 BCE, this association weakened sharply, although spatial clustering remained strong and the principal concentration of settlements shifted toward intermediate-accessibility settings. These findings show that terrain accessibility structured proto-urban settlement organization before mature states and formal transport infrastructure, but that this relationship was historically contingent rather than fixed. They provide a long-run East Asian perspective on how the spatial foundations of urban development can be reorganized as settlement systems grow more complex.
-          </p>
-        </li>
-        <li>
-          <p>
-            <span class="paper-title">How landscapes shaped the spatial foundations of cities in pre-state China.</span> <em>Nat Cities</em> (2026).<br />
+  <body>
+    <main>
+      <header>
+        <div class="masthead">
+          <div>
+            <h1>Ruoran Cheng</h1>
+            <p class="position">PhD in Economic History, London School of Economics and Political Science</p>
+            <p class="current-role">Working full-time at a coffee company.</p>
+            <p class="links">R.Cheng4@lse.ac.uk</p>
+          </div>
+
+          <img src="./avatar.jpg" class="avatar" alt="Portrait of Ruoran Cheng">
+        </div>
+
+        <nav aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#publications">Publications</a>
+          <a href="#working-papers">Working Papers</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#other">Other</a>
+        </nav>
+      </header>
+
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          I have a PhD in Economic History from the London School of Economics and Political Science. I now work full-time at a coffee company. In my spare time, I continue to pursue academic research as a personal interest, although coffee—and especially brewing it well—matters much more to me. I firmly believe that coffee makes life better.
+        </p>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+
+        <div class="publication">
+          <div>
+            <strong>Cheng, R.<sup>*</sup></strong>, Yu, X., Li, D. <em>et al.</em>
+            <span class="paper-title">Topographic accessibility and proto-urban settlement organization in Neolithic China.</span>
+            <em>Nat Cities</em> (2026).
+          </div>
+          <div class="publication-link">
+            <a href="https://doi.org/10.1038/s44284-026-00511-2">https://doi.org/10.1038/s44284-026-00511-2</a>
+          </div>
+          <div class="publication-note"><sup>*</sup> Corresponding author.</div>
+        </div>
+
+        <div class="publication">
+          <div>
+            <span class="paper-title">How landscapes shaped the spatial foundations of cities in pre-state China.</span>
+            <em>Nat Cities</em> (2026).
+          </div>
+          <div class="publication-link">
             <a href="https://doi.org/10.1038/s44284-026-00524-x">https://doi.org/10.1038/s44284-026-00524-x</a>
-          </p>
-          <p>
-            Before a large, integrated state emerged in China, proto-urban settlement systems provided the spatial foundations from which cities could emerge. Settlement patterns reconstructed from archeological sites across Neolithic China reveal how terrain-derived accessibility structured these systems, and how that relationship later changed as China moved towards state formation.
-          </p>
-        </li>
-      </ul>
+          </div>
+        </div>
+      </section>
 
-      <hr />
-      <h2>Working Papers:</h2>
-      <ul>
-        <li>
-            <span class="paper-title">Route To Cities: Natural Endowments Under Varying Institutions</span>
-            <p>
-              According to economic geography literature, the location and size of cities are influenced by natural endowments and human endowments. This study examines the role of natural endowments and their interaction with human endowments in the pre-industrial era. By examining the location of cities in China over the past two millennia and linking natural endowments to historical transportation networks, my analysis reveals that natural endowments on routes generally had a positive and statistically significant influence on urban location. However, the magnitude of this effect was not constant over time but fluctuated across different dynastic cycles. This suggests that the value attributed to natural features shifted in response to changing institutional contexts. Mechanism tests indicate that governance strategies and taxation structures were key institutional factors influencing the varying impact of natural endowments. Specifically, dynasties that relied primarily on indirect taxes, as opposed to direct taxes, saw a significantly higher marginal effect of natural endowments to waterways—representing domestic market forces—on city locations. In dynasties where the national capital was closer to the population centroid, natural endowments to land routes—representing central government control— had a higher marginal effect compared to other eras. Additionally, the arrival of Arab and European traders spurred the development of the maritime Silk Road and international trade, leading to a long-term, stable shift of cities towards coastal port areas.
-            </p>
-        </li>    
+      <section id="working-papers">
+        <h2>Working Papers</h2>
 
-        <li><a class="paper-title"
-            href="https://www.lse.ac.uk/Economic-History/Assets/Documents/WorkingPapers/Economic-History/2024/WP371.pdf">Transportation Cost in the Great Divergence: Yangtze China VS. England</a>
-            <p>
-              The Great Divergence has arguably been one of the most important debates in the field of economic history over the past two decades. This article contributes to this ongoing discussion from a novel perspective, specifically focusing on transportation conditions. Utilizing travel route books published since 16th century China, I reconstructed the national trade transport network of China during the Ming and Qing dynasties (14th to 19th centuries) and estimated transport costs and speeds in the Yangtze region during the late 17th and 18th centuries. These estimates were then compared with those of England for the same period. The findings reveal that, in the late 17th century, transport costs and speeds in the Yangtze region of China were comparable to those in England. However, a divergence emerged after 1700. This timing of divergence in transportation between the Yangtze region and England supports the strand of literature proposing that The Great Divergence began around 1700.
-            </p>
-        </li>  
-        
-      </ul>
-      
-      <hr>
+        <div class="working-paper">
+          <span class="paper-title">Route To Cities: Natural Endowments Under Varying Institutions</span>
+        </div>
 
-      <h2>Teaching:</h2>
+        <div class="working-paper">
+          <a class="paper-title" href="https://www.lse.ac.uk/Economic-History/Assets/Documents/WorkingPapers/Economic-History/2024/WP371.pdf">Transportation Cost in the Great Divergence: Yangtze China VS. England</a>
+        </div>
+      </section>
 
+      <section id="teaching">
+        <h2>Teaching</h2>
         <h3>LSE</h3>
-          <p>Teaching Assistant:</p>
-          <ul>
-            <li>EC204: Financial Markets and the Global Economy: The History of Bubbles, Crashes and Inflations (Evaluation: 4.5/5)</li>
-          </ul>
+        <p class="teaching-note">Teaching Assistant</p>
+        <ul>
+          <li>EC204: Financial Markets and the Global Economy: The History of Bubbles, Crashes and Inflations (Evaluation: 4.5/5)</li>
+        </ul>
+      </section>
 
-      <hr>
+      <section id="other">
+        <h2>Other</h2>
+        <p>
+          <a href="https://github.com/ruoranc/Mingroutes">Transportation Network in Late Imperial China</a>: I have georeferenced all courier stations in Ming China, which formed the official transportation network from the 14th to the 19th century.
+        </p>
+      </section>
 
-        <h2>Other:</h2>
-          <p><a href="https://github.com/ruoranc/Mingroutes">Transportation Network in Late Imperial China</a>: 
-          I have georeferenced all courier stations in Ming China, which formed the official transportation network from the 14th to the 19th century.</p>
-
-    </body>
-  </html>
+      <footer>
+        <p>Last updated September 2026.</p>
+      </footer>
+    </main>
+  </body>
+</html>
